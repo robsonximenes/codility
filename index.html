@@ -1,0 +1,28 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<h1>Codility Robgol</h1>
+
+<p>Página para executar os testes dos scripts: </p>
+
+<div id="error-log" style="border: double; border-color: black; width: 90%; height: 300px; background-color: azure" ></div>
+
+
+
+<script>
+    /* Adicionando os logs na div! */
+    console.log = (function (old_function, div_log) {
+        return function (text) {
+            old_function(text);
+            div_log.innerHTML += text +"<br>";
+        };
+    }(console.log.bind(console), document.getElementById("error-log")));
+</script>
+
+<script src="Lesson%203%20-%20Time%20Complexity/TapeEquilibrium.js"></script>
+
+</body>
+</html>
