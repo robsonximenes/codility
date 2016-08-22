@@ -1,23 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
+    <h1>Codility Robgol</h1>
 
-<h1>Codility Robgol</h1>
+    <p>Página para executar os testes dos scripts. Cada script tem seus testes manualmente cadastrados. </p>
 
-<p>Página para executar os testes dos scripts: </p>
-
-<div id="error-log" style="border: double; border-color: black; width: 90%; height: 300px; background-color: azure" ></div>
-
-
-
+    <div class="panel panel-default">
+        <div class="panel-heading">Console</div>
+        <div class="panel-body" id="error-log"></div>
+    </div>
+</div>
 <script>
     /* Adicionando os logs na div! */
     console.log = (function (old_function, div_log) {
         return function (text) {
             old_function(text);
-            div_log.innerHTML += text +"<br>";
+            div_log.innerHTML += text + "<br>";
         };
     }(console.log.bind(console), document.getElementById("error-log")));
 </script>
