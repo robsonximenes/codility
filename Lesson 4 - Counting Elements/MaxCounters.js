@@ -23,8 +23,8 @@ function solution(N, A){
         }else if(valor == N+1){
             if(!operacaoAnteriorMax) {
                 for (var x = 0; x < contadores.length; x++)contadores[x] = max;
+                operacaoAnteriorMax = true;
             }
-            operacaoAnteriorMax = true;
         }
     });
     return contadores;
